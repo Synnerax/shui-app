@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Banner/>
   <!--  <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -9,6 +10,16 @@
   </div>
 </template>
 
+<script>
+import Banner from "@/components/StreamBanner.vue"
+
+export default {
+  name: "App",
+  components: {
+    Banner
+  }
+}
+</script>
 <style lang="scss">
 body {
   margin: 0;
@@ -21,6 +32,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  position: relative;
+
+  .streams-banner {
+    position: absolute;
+    left: 80px;
+    z-index: 10;
+  }
 }
 
 nav {
