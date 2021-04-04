@@ -5,6 +5,12 @@
       "username": "elliot",
       "password": "$2b$10$8sXPZ/.cZVVtpfh6ndQ9Sen8Xz.WaBfkh7Cqfo/gbv3mFBD0GNJCy",
       "userkey": "U2FsdGVkX19fiqrMB8vLraL9bHbykIeDYApbyeN9hcI="
+    },
+    {
+      "uuid": "HpNpgGRpSR",
+      "username": "elliot",
+      "password": "$2b$10$blkvhLAI7ZC78j41ljOVzugzqrNGblfcgM0EH/e0ywKE.ovM1pp2u",
+      "userkey": "U2FsdGVkX19GASSfjqg6zRo5MMLF/48BNQQmMV/yGIM="
     }
   ]
 }
