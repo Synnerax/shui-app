@@ -25,6 +25,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: rgba(25, 39, 74, 1);
+
+  
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -59,9 +62,53 @@ nav {
 #Landing {
   position: relative;
   min-height: 100vh;
-  background: rgba(25, 39, 74, 1);
 
-    h1 {
+}
+
+#register {
+  min-height: 100vh;
+    
+    
+    .shui-banner {
+    padding-top: 5rem;
+  }
+}
+
+#register-user {
+  margin: auto;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+
+
+  input {
+    background: rgba(0, 0, 255, 0);
+    border: 2px solid #f4f4f4f4;
+    height: 72px;
+    margin-bottom: 25px;
+    font-family: 'PT Sans', sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    color: #f4f4f4f4;
+    font-size: 18px;
+
+
+    &::placeholder {
+      color: #f4f4f4f4;
+    }
+  }
+
+  button {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+    height: 72px;
+  }
+}
+
+.shui-banner {
+  h1 {
     font-family: 'Cantarell', sans-serif;
     color: #f4f4f4f4;
     }
@@ -69,14 +116,13 @@ nav {
     font-family: 'PT Sans', sans-serif;
     color: rgba(0, 178, 255, 0.8);
     }
-
 }
-
 
 .waves {
   width: 100%;
   position: absolute;
   bottom: 0;
+  left: 0;
 }
 
 .center-flexbox {
