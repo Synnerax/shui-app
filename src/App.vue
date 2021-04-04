@@ -107,6 +107,38 @@ nav {
   }
 }
 
+
+#flow {
+  padding-top: 20px;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .stream-msg {
+    width: 90%;
+    min-height: 152px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      
+      
+      box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.1);
+    }
+}
+
+  .create-msg {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+  }
+}
 .shui-banner {
   h1 {
     font-family: 'Cantarell', sans-serif;
