@@ -26,8 +26,23 @@ export default new Vuex.Store({
       // Route to /passwords
       //router.push('/login')
 
-    }
-  },
+    },
+    async login(ctx, cred) {
+
+      let resp = await axios.post(`${API}/login`, {
+        username: cred.username,
+        password: cred.password
+      });
+
+      // Session Storage
+      sessionStorage.setItem('userToken', resp.data.token);
+      sessionStorage.setItem('userkey', resp.data.userkey);
+
+      // Route to /passwords
+      //router.push('/flow')
+    
+  }
+},
   modules: {
   }
 })
