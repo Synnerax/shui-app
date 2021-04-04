@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
-//import router from './../router'
+import router from './../router'
 //import CryptoJS from 'crypto-js';
 
 Vue.use(Vuex)
@@ -39,7 +39,7 @@ export default new Vuex.Store({
       sessionStorage.setItem('userkey', resp.data.userkey);
 
       // Route to /passwords
-      //router.push('/flow')
+      router.push('/flow')
     
   }
 },
