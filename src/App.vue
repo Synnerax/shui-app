@@ -116,20 +116,67 @@ nav {
   flex-direction: column;
   align-items: center;
 
-  .stream-msg {
+  .msg-container {
     width: 90%;
+    position: relative;
+
+
+  }
+
+  .stream-tag-container {
+    text-align: right;
+
+      .stream-tag {
+      position: static;
+      margin-right: 3rem;
+      width: 100px;
+      height: 23px;
+      left: 16px;
+      top: 4.5px;
+
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+
+      color: rgba(0, 178, 255, 0.8);
+    }
+    .msg-triangle {
+      position: absolute;
+      right: 0;
+    }
+  }
+  .stream-msg {
+    width: 100%;
     min-height: 152px;
     background: #FFFFFF;
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
     position: relative;
 
-    &::after {
-      position: absolute;
-      right: 0;
-      bottom: -20px;
-      
-      
-      box-shadow: inset 0px 4px 3px rgba(0, 0, 0, 0.1);
+    .date-container {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding: 15px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .name-tag-container {
+      padding-left: 15px;
+      padding-bottom: 10px;
+      text-align: left;
+      span {
+        font-family: PT Sans;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 150%;
+        color: #000000;
+        padding-left: 5px;
+      }
     }
 }
 
