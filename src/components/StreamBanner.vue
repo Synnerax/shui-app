@@ -1,10 +1,16 @@
 <template>
-      <img class="streams-banner" src="@/assets/streamsbanner.svg" alt="">
+      <img @click="displaySettings" class="streams-banner" src="@/assets/streamsbanner.svg" alt="">
 </template>
 
 <script>
 export default {
-    name: "Banner"
+    name: "Banner",
+    methods: {
+        displaySettings() {
+            console.log('Im Alive!')
+            this.$store.commit('toggleDisplaySettings')
+        }
+    }
 }
 </script>
 

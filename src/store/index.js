@@ -6,17 +6,21 @@ import router from './../router'
 
 Vue.use(Vuex)
 
-const API = 'http://localhost:3000';
 
 export default new Vuex.Store({
   state: {
+    displaySettings: false
   },
-  mutations: { 
+  mutations: {
+    toggleDisplaySettings(state) {
+      state.displaySettings = !state.displaySettings
+    }
+    
   },
   actions: {
     async register(ctx, cred) {
 
-      let resp = await axios.post(`${API}/register`, {
+      let resp = await axios.post(`/register`, {
         username: cred.username,
         password: cred.password
       });
@@ -29,7 +33,7 @@ export default new Vuex.Store({
     },
     async login(ctx, cred) {
 
-      let resp = await axios.post(`${API}/login`, {
+      let resp = await axios.post(`/login`, {
         username: cred.username,
         password: cred.password
       });

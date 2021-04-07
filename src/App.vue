@@ -39,7 +39,7 @@ body {
 
   .streams-banner {
     position: absolute;
-    left: 80px;
+    left: 32px;
     z-index: 10;
   }
 }
@@ -59,6 +59,63 @@ nav {
   }
 }
 
+#settings {
+    background: #EF4343;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+
+    .settings-header {
+      color: #FFFFFF;
+      line-height: 150%;
+      font-weight: bold;
+      text-align: left;
+      padding-top: 74px;
+      padding-left: 52px;
+    }
+
+    .followed-streams {
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      .stream-tag {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+
+        .stream-name {
+          padding-right: 13px;
+          padding-left: 9px;
+          color: #FFFFFF;
+          font-style: italic;
+          
+        }
+
+        .cross-button-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 32px;
+          background: rgba(255, 255, 255, 0.2);
+}
+}
+    }
+
+    .add-stream-section {
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 85%;
+      margin: auto auto 0;
+      height: 72px;
+}
+}
 #Landing {
   position: relative;
   min-height: 100vh;
@@ -109,7 +166,7 @@ nav {
 
 
 #flow {
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   position: relative;
   min-height: 100vh;
   display: flex;

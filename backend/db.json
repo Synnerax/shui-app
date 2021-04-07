@@ -5,6 +5,28 @@
       "username": "elliot",
       "password": "$2b$10$8sXPZ/.cZVVtpfh6ndQ9Sen8Xz.WaBfkh7Cqfo/gbv3mFBD0GNJCy",
       "userkey": "U2FsdGVkX19fiqrMB8vLraL9bHbykIeDYApbyeN9hcI="
+    },
+    {
+      "uuid": "awRH9Gw7HH",
+      "username": "elliot2",
+      "password": "$2b$10$BX/96.x4zmKLaX/yeIZtFOk3E5xqrvXSk9ebHF0UuxEkPIB1IoAU6",
+      "userkey": "U2FsdGVkX187HIkB3GlD4RrMilRumvr7N+w6Ytvbgwk="
+    }
+  ],
+  "stream-flow": [
+    {
+      "id": "5UvGuczle",
+      "owner": "71f4f24d21f518c31660643bedc1c941e7fa4496af539e11e6851f9ef1e5145b3b2f068af914b99bcf4d1947fbe75a1837d6445788de090ada0aa2ccf7fbc1dc",
+      "username": "elliot",
+      "streams": "Gothenburg",
+      "message": "test msg"
+    },
+    {
+      "id": "zd618aGcI",
+      "owner": "71f4f24d21f518c31660643bedc1c941e7fa4496af539e11e6851f9ef1e5145b3b2f068af914b99bcf4d1947fbe75a1837d6445788de090ada0aa2ccf7fbc1dc",
+      "username": "elliot",
+      "streams": "Gothenburg",
+      "message": "test msg"
     }
   ]
 }
