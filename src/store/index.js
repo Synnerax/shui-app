@@ -82,7 +82,6 @@ export default new Vuex.Store({
       // Session Storage
       sessionStorage.setItem('userToken', resp.data.token);
       sessionStorage.setItem('userkey', resp.data.userkey);
-      sessionStorage.setItem('public', resp.data.public)
       // Route to /passwords
       ctx.commit('toggleLoggedInState')
       router.push('/flow')
