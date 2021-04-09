@@ -7,7 +7,6 @@ const CryptoJS = require('crypto-js');
 const router = new Router();
 
 router.post('/', async (req, res) => {
-    console.log(req.body)
     if(req.body.username && req.body.password) { 
         let userExist = db.get('users').find({username: req.body.username}).value()
         if(userExist) {

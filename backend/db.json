@@ -21,6 +21,34 @@
         "stockholm",
         "alert"
       ]
+    },
+    {
+      "uuid": "l5kUbzm0Zj",
+      "username": "lasteruser",
+      "password": "$2b$10$sOtx5Vm0cu6fs5LGUHs3r.ubhX7e2i6sLEni5Pd5PIrDKU7sdeWqO",
+      "userkey": "U2FsdGVkX1/pYnU0Og1X2zF1tlOZIlceWeA7lj9o2MM=",
+      "streams": []
+    },
+    {
+      "uuid": "hbIX7LmX9b",
+      "username": "lasttry",
+      "password": "$2b$10$JHtg3im7j/MjCdwp4pz/V.GIOt.76oYjrjxUHMU1aUStLIrBR81rq",
+      "userkey": "U2FsdGVkX1/JFegQv6WMUrQSOjI+z1tvczYq/2VocNE=",
+      "streams": []
+    },
+    {
+      "uuid": "LO-pPdVgj0",
+      "username": "last1",
+      "password": "$2b$10$WwLUdjogDcfbMN36HYFiX.gTI.wn/wT2eL5KoTgIWXPkqbydoTiJu",
+      "userkey": "U2FsdGVkX19MJpMO7XKFUuJZtzNOXFiCsw1ijz6gFY8=",
+      "streams": []
+    },
+    {
+      "uuid": "Gy3-YZiVfv",
+      "username": "lasttest",
+      "password": "$2b$10$a91UQLOMfFcwqAENYu1ZteDjMAoh5YNzAMlCvCfuyNftK5cPeD6IW",
+      "userkey": "U2FsdGVkX1+FZxSF1s0f9pOwFksRxULmqWn+D8K5msQ=",
+      "streams": []
     }
   ],
   "stream-flow": [

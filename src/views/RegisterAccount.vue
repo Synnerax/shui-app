@@ -4,6 +4,7 @@
     <WavesFooter />
     <NoSettings/>
     <section id="register-user">
+      <span v-show="inputError" class="register-error">Try something else</span>
       <input class="username-input" type="text" v-model="username" placeholder="Användarnamn">
       <input class="password-input" type="password" v-model="password" placeholder="Lösenord">
       <button @click="register">Registrera</button>
@@ -31,6 +32,11 @@ export default {
       this.$store.dispatch('register', { username: this.username, password: this.password })
     }
   },
+  computed: {
+    inputError() {
+      return this.$store.state.errorMessage
+    }
+  }
   
 }
 </script>

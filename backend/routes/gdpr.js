@@ -12,28 +12,28 @@ router.get('/remove-me', async (req, res) => {
     const token = req.headers['authorization'].split(' ')[1];
     console.log("should be token:", token)
     try {
-        // auth = is token valid?
+        // Checks if token is valid
         const verified_user = jwt.verify(token, process.env.JWT_KEY);
-        console.log(verified_user)
 
+        // Finds the user in database
         let user = await db.get('users')
         .find({uuid: verified_user.uuid}).value()
         
+        // Finds all messages with the same username as the user thats being deleted
         let flowsToChange = await db.get('stream-flow').filter({ username: user.username }).value()
-        console.log("Flows To change:",flowsToChange)
+
+        // Loops all the messages and changes username to Anonym
         for(let i = 0; i < flowsToChange.length; i++) {
             let id = flowsToChange[i].id
             console.log("id in for loop:", id)
             await db.get('stream-flow').find({ id: id }).assign({ username: "Anonym"}).write()
         }
-        //let msg = await db.get('stream-flow').filter({ username: user.username }).value()        
-        console.log("this is the user:",user.username)
-        //console.log("this is the msg:",msg)
-        // get user by uuid in DB
-        db.get('users').remove({ uuid: verified_user.uuid }).write();
-        console.log(user)
+           
         
-        // Tell FE all is ok!
+        db.get('users').remove({ uuid: verified_user.uuid }).write();
+        
+        
+        // Send back status to frontend when user is deleted
         res.status(201).send('user was deleted')
 
     } catch(err) {

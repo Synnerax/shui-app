@@ -33,7 +33,6 @@ router.post('/add', async (req, res) => {
 
 router.post('/remove', async (req, res) => {
     const token = req.headers['authorization'].split(' ')[1];
-    console.log('/romve was triggered')
     try {
         const verified_user = jwt.verify(token, process.env.JWT_KEY);
         
@@ -43,13 +42,9 @@ router.post('/remove', async (req, res) => {
             return stream !== req.body.stream
         })
 
-        //await db.get('users').find({uuid: verified_user.uuid}).pullAll([])
         let updated = await db.get('users').find({uuid: verified_user.uuid}).assign({streams: array}).write()
-        console.log('This is streams:', streams)
-        console.log('user UUID:',verified_user.uuid)
-        console.log("array:", array)
-        console.log("this is the body:", req.body.stream)
-        //let user = await db.get('users').find({ uuid: verified_user.uuid }).get//('streams').pullAll(req.body.stream).write()
+        
+        
         res.status(200).send(updated.streams)
     } catch (error) {
         console.log(error)

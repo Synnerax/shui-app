@@ -1,6 +1,4 @@
-Exempel användare som följer alla nuvarande streams: 
-    Användarnamn: invalid
-    Lösenord: user
+
 
 Nuvarande streams: aler, gbg, stockholm, borås, tram
 
@@ -14,8 +12,7 @@ Efter redovisning - komplettering
 
 * la till css och för sidan /removed (sidan man kommer till efter man raderar användaren)
 
-* centrerade appen och satte en max-width på #app så att inte dom blå vågerna kom över halva hemsidan när 
-man kolla från skrivbordvy istället för mobilvy
+* centrerade appen och satte en max-width på #app så att inte dom blå vågerna kom över halva hemsidan när man kolla från skrivbordvy istället för mobilvy
 
 * la till css på texten i meddelande rutorna och knappar
 

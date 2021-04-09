@@ -74,6 +74,10 @@ nav {
   }
 }
 
+.register-error {
+  color: #EF4343;
+  font-size: 20px;
+}
 #settings {
     background: #EF4343;
     width: 100%;

@@ -13,7 +13,8 @@ export default new Vuex.Store({
       displaySettings: false,
       streams: [],
       messages: [],
-      loggedIn: false
+      loggedIn: false,
+      errorMessage: false
     }
   },
   mutations: {
@@ -30,6 +31,9 @@ export default new Vuex.Store({
     },
     toggleLoggedInState(state) {
       state.isLoggedIn = !state.isLoggedIn
+    },
+    inputError(state) {
+      state.errorMessage = true
     }
     
   },
@@ -64,6 +68,7 @@ export default new Vuex.Store({
         //router.push('/login')
         router.push('/sign-in')
       } catch(err) {
+        ctx.commit('inputError')
         console.error(err);
       }
     },
@@ -117,6 +122,8 @@ export default new Vuex.Store({
         console.log("the error:", error)
         router.push('/')
         sessionStorage.removeItem('userToken')
+        sessionStorage.removeItem('userkey')
+
       }
     },
     async addStream(ctx, payload) {
