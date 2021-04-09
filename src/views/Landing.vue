@@ -5,6 +5,7 @@
       <router-link to="/register">Create Account</router-link>
       <router-link to="/sign-in">Sign-in</router-link>
     </nav>
+    <NoSettings/>
     <WavesFooter/>
   </div>
 </template>
@@ -13,12 +14,17 @@
 // @ is an alias to /src
 import WavesFooter from "@/components/Waves.vue"
 import ShuiBanner from "@/components/ShuiBanner.vue"
+import NoSettings from '@/components/NoSettings.vue'
 
 export default {
   name: 'Home',
   components: {
     WavesFooter,
-    ShuiBanner
+    ShuiBanner,
+    NoSettings
+  },
+  beforeMount(){
+      this.$store.dispatch('isLoggedIn')
   }
 }
 </script>

@@ -1,10 +1,97 @@
 {
   "users": [
     {
-      "uuid": "ltFWIddhBC",
-      "username": "elliot",
-      "password": "$2b$10$8sXPZ/.cZVVtpfh6ndQ9Sen8Xz.WaBfkh7Cqfo/gbv3mFBD0GNJCy",
-      "userkey": "U2FsdGVkX19fiqrMB8vLraL9bHbykIeDYApbyeN9hcI="
+      "uuid": "MstT_F4H2S",
+      "username": "invalid",
+      "password": "$2b$10$hlNASiaUnx8LieOavkIp1ecs0QqMFtcG0hUWmVV2kGrkFpIJITe4e",
+      "userkey": "U2FsdGVkX19F+d1PGcizIEt8K6e0iVgGA1HuFB6Zc1A=",
+      "streams": [
+        "alert",
+        "gbg",
+        "stockholm",
+        "borås"
+      ]
+    },
+    {
+      "uuid": "uIXz62xzik",
+      "username": "Snodden",
+      "password": "$2b$10$HZcPmAWCgTqHQw/Bq.xnEui5VV.NUU/yhCL1BnmVTxTbeaWnaMRYa",
+      "userkey": "U2FsdGVkX1+fHTkliFFE24EP89y6b1xX4USpxRDjc7o=",
+      "streams": [
+        "stockholm",
+        "alert"
+      ]
+    },
+    {
+      "uuid": "l5kUbzm0Zj",
+      "username": "lasteruser",
+      "password": "$2b$10$sOtx5Vm0cu6fs5LGUHs3r.ubhX7e2i6sLEni5Pd5PIrDKU7sdeWqO",
+      "userkey": "U2FsdGVkX1/pYnU0Og1X2zF1tlOZIlceWeA7lj9o2MM=",
+      "streams": []
+    },
+    {
+      "uuid": "hbIX7LmX9b",
+      "username": "lasttry",
+      "password": "$2b$10$JHtg3im7j/MjCdwp4pz/V.GIOt.76oYjrjxUHMU1aUStLIrBR81rq",
+      "userkey": "U2FsdGVkX1/JFegQv6WMUrQSOjI+z1tvczYq/2VocNE=",
+      "streams": []
+    },
+    {
+      "uuid": "LO-pPdVgj0",
+      "username": "last1",
+      "password": "$2b$10$WwLUdjogDcfbMN36HYFiX.gTI.wn/wT2eL5KoTgIWXPkqbydoTiJu",
+      "userkey": "U2FsdGVkX19MJpMO7XKFUuJZtzNOXFiCsw1ijz6gFY8=",
+      "streams": []
+    },
+    {
+      "uuid": "Gy3-YZiVfv",
+      "username": "lasttest",
+      "password": "$2b$10$a91UQLOMfFcwqAENYu1ZteDjMAoh5YNzAMlCvCfuyNftK5cPeD6IW",
+      "userkey": "U2FsdGVkX1+FZxSF1s0f9pOwFksRxULmqWn+D8K5msQ=",
+      "streams": []
+    }
+  ],
+  "stream-flow": [
+    {
+      "id": "CDYreu48s",
+      "date": "2021-04-09, 20:56:23",
+      "username": "invalid",
+      "streams": [
+        "gbg",
+        "tram",
+        "alert"
+      ],
+      "text": "U2FsdGVkX18oz23b/PgiqtK6F6DMYyxTkecWcsRmZOb3ahHP/7K1Wf1wTrm38l4cdttb5Yqjyq/FrKs8EGpQtDmVy6F8JKTYeXKWnw9b8lplPp2SP9MW8IFYH/D/ZwxNK39oaIckumJ4gz3h27bd1fChwCZB+6kfOZaoFsTMxi3gkzp0yLpJckaZVZJUKy6Wmjd8cgFaLtaGNXy0YNa9lw=="
+    },
+    {
+      "id": "zbfRQs6zW",
+      "date": "2021-04-09, 20:59:00",
+      "username": "Anonym",
+      "streams": [
+        "alert",
+        "borås"
+      ],
+      "text": "U2FsdGVkX1+L1m6gmyC6NQ9nJlA5+oEDNL1bT4xWaZOVP6oOC+/FEgjjN3nP1W6/4KzHoTcUz4wYAYIJmt0asA+z4eOxJTy94DusJcB49etvCyVZvQGeAMZT4rq2oZsEU1RiOgZ5LfpvvW5X4ud3CV8BOGYdNYrHcSQ4YPA3+98Hhoj4+wg0AxkFRb3mOk7RLorCuHkTpiRhM1q4SPtYFw=="
+    },
+    {
+      "id": "j5XT1GaLn",
+      "date": "2021-04-09, 21:17:35",
+      "username": "Snodden",
+      "streams": [
+        "stockholm",
+        "alert"
+      ],
+      "text": "U2FsdGVkX1+Xl/y4Issp49Rwg/r4lCJGfzUzTH35zp21bXTLTZmp+kRLaAOtTdPae2RU+SqbYANeeJFuhhccMghPKv626j3gA4SxpoirDvRnR8vpnArp0oEbeNQlA7lYWdwiPVmmjBdsSHHnOI3euwiGetW2WvzNvaUB+lKJ6rw="
+    },
+    {
+      "id": "ahxWfoKBi",
+      "date": "2021-04-09, 21:30:50",
+      "username": "Anonym",
+      "streams": [
+        "alert",
+        "gbg"
+      ],
+      "text": "U2FsdGVkX1+1lBM1ddyY8Q4z6L0eDy7zl+LIpcRII5UL3jXROxIJrK/3fuPH0JTrsGXGBDRMHOCbnEBO+9LqSA=="
     }
   ]
 }
