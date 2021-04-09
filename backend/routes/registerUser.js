@@ -9,7 +9,10 @@ const router = new Router();
 router.post('/', async (req, res) => {
     console.log(req.body)
     if(req.body.username && req.body.password) { 
-
+        let userExist = db.get('users').find({username: req.body.username}).value()
+        if(userExist) {
+            res.status(403).send('User already created')
+        } else {
         // encrypt pw with userkey
         const HASHED_PW = await bcrypt.hash(req.body.password, 10);
         
@@ -23,7 +26,8 @@ router.post('/', async (req, res) => {
             uuid: shortid.generate(),
             username: req.body.username,
             password: HASHED_PW, // hash with bcrypt
-            userkey: ENCRYPTED_USER_KEY // encrypted with SECRET
+            userkey: ENCRYPTED_USER_KEY, // encrypted with SECRET
+            streams: []
         }
         
         // Add new user to db
@@ -33,7 +37,7 @@ router.post('/', async (req, res) => {
 
         // All ok to frontend
         res.status(201).send('User created.');
-
+    }
     } else {
         res.status(400).send('Whoops! Did you really entered the credentials correctly?')
     }

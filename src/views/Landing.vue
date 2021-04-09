@@ -19,6 +19,9 @@ export default {
   components: {
     WavesFooter,
     ShuiBanner
+  },
+  beforeMount(){
+      this.$store.dispatch('isLoggedIn')
   }
 }
 </script>

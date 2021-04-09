@@ -5,7 +5,7 @@
     <section id="register-user">
       <input class="username-input" type="text" v-model="username" placeholder="Användarnamn">
       <input class="password-input" type="password" v-model="password" placeholder="Lösenord">
-      <button @click="register">Registrera</button>
+      <button @click="register">Logga in</button>
     </section>
   </section>
 </template>
@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     register(){
-      this.$store.dispatch('register', { username: this.username, password: this.password })
+      this.$store.dispatch('login', { username: this.username, password: this.password })
     }
   }
 }

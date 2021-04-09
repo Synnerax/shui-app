@@ -1,16 +1,57 @@
 {
   "users": [
     {
-      "uuid": "ltFWIddhBC",
+      "uuid": "36leKEbkVA",
       "username": "elliot",
-      "password": "$2b$10$8sXPZ/.cZVVtpfh6ndQ9Sen8Xz.WaBfkh7Cqfo/gbv3mFBD0GNJCy",
-      "userkey": "U2FsdGVkX19fiqrMB8vLraL9bHbykIeDYApbyeN9hcI="
+      "password": "$2b$10$NjdG.Of9mho9Auds7vlXNe9gIbMfqsVTDe/ZxISPC/lstvhx50b/K",
+      "userkey": "U2FsdGVkX1+cj4ya3tbranWNuux5xwZtKQCZJ0q4gMw=",
+      "streams": []
     },
     {
-      "uuid": "HpNpgGRpSR",
+      "uuid": "VTYpv_Tz2J",
+      "username": "elliot1",
+      "password": "$2b$10$MYi27GFKL7Bql86p74T76OAblNdPgMmL5exvKBaBjeMGtAforToCe",
+      "userkey": "U2FsdGVkX199FUjfdYwe8UMd6ShirGFrTGnbg29amRA=",
+      "streams": []
+    }
+  ],
+  "stream-flow": [
+    {
+      "id": "kCuvsYDrs",
+      "date": "2021-04-09, 16:50:37",
       "username": "elliot",
-      "password": "$2b$10$blkvhLAI7ZC78j41ljOVzugzqrNGblfcgM0EH/e0ywKE.ovM1pp2u",
-      "userkey": "U2FsdGVkX19GASSfjqg6zRo5MMLF/48BNQQmMV/yGIM="
+      "streams": [
+        "gbg",
+        "123"
+      ],
+      "text": "U2FsdGVkX18WTbCUaOUQwNCcWshTJ23p1guB+K8Mt9S3mHJYQnF3/19P0+gIaP+FWZ7sny9KbwqBSBniUB7XSQ=="
+    },
+    {
+      "id": "Nj9mjrm-8",
+      "date": "2021-04-09, 16:50:51",
+      "username": "elliot",
+      "streams": [
+        "test123456"
+      ],
+      "text": "U2FsdGVkX1/K6/Uvtah1/AQ1Ujsi2Y6/O69O2sXD1Z1n7FGxVXLKRKGJGmRYgP/d"
+    },
+    {
+      "id": "vpNuMcAMv",
+      "date": "2021-04-09, 16:59:01",
+      "username": "Anonym",
+      "streams": [
+        "Helg"
+      ],
+      "text": "U2FsdGVkX1/JUk6CyurMFQIlfXYxpsHSedyKZh8+rjw="
+    },
+    {
+      "id": "-R-JDXURG",
+      "date": "2021-04-09, 16:59:42",
+      "username": "Anonym",
+      "streams": [
+        "väder"
+      ],
+      "text": "U2FsdGVkX1/9PFyjcK2LTuTiiyL1dwJYjqIbZS1JfzY="
     }
   ]
 }

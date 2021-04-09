@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Banner/>
+    <Settings/>
   <!--  <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -12,11 +13,12 @@
 
 <script>
 import Banner from "@/components/StreamBanner.vue"
-
+import Settings from '@/components/Settings.vue'
 export default {
   name: "App",
   components: {
-    Banner
+    Banner,
+    Settings
   }
 }
 </script>
@@ -39,7 +41,7 @@ body {
 
   .streams-banner {
     position: absolute;
-    left: 80px;
+    left: 32px;
     z-index: 10;
   }
 }
@@ -59,6 +61,68 @@ nav {
   }
 }
 
+#settings {
+    background: #EF4343;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    z-index: 5;
+
+    .settings-header {
+      color: #FFFFFF;
+      line-height: 150%;
+      font-weight: bold;
+      text-align: left;
+      padding-top: 74px;
+      padding-left: 52px;
+    }
+
+    .followed-streams {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%;
+      margin: 0 auto;
+      .stream-tag {
+        margin-top: 9px;
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+
+        .stream-name {
+          padding-right: 13px;
+          padding-left: 9px;
+          color: #FFFFFF;
+          font-style: italic;
+          margin-left: 15px;
+          
+        }
+
+        .cross-button-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100%;
+          width: 32px;
+          background: rgba(255, 255, 255, 0.2);
+}
+}
+    }
+
+    .add-stream-section {
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 85%;
+      margin: auto auto 0;
+      height: 72px;
+}
+}
 #Landing {
   position: relative;
   min-height: 100vh;
@@ -107,6 +171,82 @@ nav {
   }
 }
 
+
+#flow {
+  /*padding-top: 20px;*/
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .msg-container {
+    width: 90%;
+    position: relative;
+
+
+  }
+
+  .stream-tag-container {
+    text-align: right;
+
+      .stream-tag {
+      position: static;
+      margin-right: 3rem;
+      width: 100px;
+      height: 23px;
+      left: 16px;
+      top: 4.5px;
+
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 23px;
+
+      color: rgba(0, 178, 255, 0.8);
+    }
+  }
+
+  .stream-msg {
+    width: 100%;
+    min-height: 152px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.25);
+    position: relative;
+
+    .date-container {
+      font-family: 'PT Sans', sans-serif;
+      font-size: 12px;
+      line-height: 150%;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding: 15px;
+      color: rgba(0, 0, 0, 0.6);
+    }
+
+    .name-tag-container {
+      padding-left: 15px;
+      padding-bottom: 10px;
+      text-align: left;
+      span {
+        font-family: PT Sans;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 150%;
+        color: #000000;
+        padding-left: 5px;
+      }
+    }
+}
+
+  .create-msg {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+  }
+}
 .shui-banner {
   h1 {
     font-family: 'Cantarell', sans-serif;
@@ -117,7 +257,10 @@ nav {
     color: rgba(0, 178, 255, 0.8);
     }
 }
-
+    .msg-triangle {
+      position: absolute;
+      right: 0;
+    }
 .waves {
   width: 100%;
   position: absolute;
@@ -130,5 +273,20 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+#text-area {
+  resize: none;
+  width: 95%;
+  height: 95%;
+  border: none;
+}
+
+.push-to-streams > input {
+  border-style: none;
+  background: none;
+  width: 98%;
+  height: 95%;
 }
 </style>
