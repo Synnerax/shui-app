@@ -1,6 +1,6 @@
 <template>
   <section id="flow">
-      
+      <Settings/>
       <StreamMsg v-for="(message, index) in messages" :key="index" :message="message"/>
        <router-link to="/create-msg"><img class="create-msg" src="../assets/create-msg.svg" alt="create message button"></router-link>
   </section>
@@ -9,7 +9,7 @@
 <script>
 
 import StreamMsg from '@/components/StreamMsg.vue'
-//import Settings from '@/components/Settings.vue'
+import Settings from '@/components/Settings.vue'
 
 
 export default {
@@ -24,7 +24,7 @@ export default {
     },
     components: {
         StreamMsg,
-        
+        Settings
         
     },
     mounted() {

@@ -7,10 +7,10 @@ const jwt = require('jsonwebtoken');
 const router = new Router();
 
 
-router.post('/remove-me', async (req, res) => {
+router.get('/remove-me', async (req, res) => {
 
     const token = req.headers['authorization'].split(' ')[1];
-    
+    console.log("should be token:", token)
     try {
         // auth = is token valid?
         const verified_user = jwt.verify(token, process.env.JWT_KEY);
@@ -30,9 +30,7 @@ router.post('/remove-me', async (req, res) => {
         console.log("this is the user:",user.username)
         //console.log("this is the msg:",msg)
         // get user by uuid in DB
-        await db.get('users')
-        .remove({ uuid: verified_user.uuid })
-        .write();
+        db.get('users').remove({ uuid: verified_user.uuid }).write();
         console.log(user)
         
         // Tell FE all is ok!

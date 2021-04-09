@@ -2,6 +2,7 @@
   <section id="register">
     <ShuiBanner/>
     <WavesFooter />
+    <NoSettings/>
     <section id="register-user">
       <input class="username-input" type="text" v-model="username" placeholder="Användarnamn">
       <input class="password-input" type="password" v-model="password" placeholder="Lösenord">
@@ -13,22 +14,24 @@
 <script>
 import ShuiBanner from '../components/ShuiBanner.vue'
 import WavesFooter from '../components/Waves.vue'
+import NoSettings from '@/components/NoSettings.vue'
 
 
 export default {
-  components: { ShuiBanner, WavesFooter },
+  components: { ShuiBanner, WavesFooter, NoSettings},
   name: "Register-page",
   data(){
     return {
-      username: 'elliot',
-      password: 'qwerty'
+      username: '',
+      password: ''
   }
   },
   methods: {
     register(){
       this.$store.dispatch('register', { username: this.username, password: this.password })
     }
-  }
+  },
+  
 }
 </script>
 

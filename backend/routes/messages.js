@@ -83,8 +83,8 @@ router.get('/view', (req, res) => {
             }           
             res.status(200).send(flows)
         } else {            
-            let flows = db.get('stream-flow').value()
-            res.status(200).send(flows)
+            //let flows = db.get('stream-flow').value()
+            res.status(200).send()
         }
 
     } catch (error) {

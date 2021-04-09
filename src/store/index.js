@@ -12,14 +12,15 @@ export default new Vuex.Store({
     return {
       displaySettings: false,
       streams: [],
-      messages: []
+      messages: [],
+      loggedIn: false
     }
   },
   mutations: {
     toggleDisplaySettings(state) {
-      if(sessionStorage.getItem('userToken')){
+      
         state.displaySettings = !state.displaySettings
-      }
+      
     },
     fetchedStreams(state, streams) {
       state.streams = streams
@@ -27,19 +28,24 @@ export default new Vuex.Store({
     showMessages(state, messages) {
       state.messages = messages
     },
-   
+    toggleLoggedInState(state) {
+      state.isLoggedIn = !state.isLoggedIn
+    }
     
   },
   actions: {
-    async removeUser() {
+    async removeUser(ctx) {
       try{
-        let resp = await axios.post('gdpr/remove-me', {
+        let resp = await axios.get('/gdpr/remove-me', {
           headers: {
             'authorization': `Bearer ${sessionStorage.getItem('userToken')}`
           }
         })
         console.log(resp)
+        ctx.commit('toggleDisplaySettings')
         router.push("/removed")
+        sessionStorage.removeItem('userToken')
+        sessionStorage.removeItem('userKey')
       } catch(err) {
         console.error(err)
       }
@@ -73,13 +79,14 @@ export default new Vuex.Store({
       sessionStorage.setItem('userkey', resp.data.userkey);
       sessionStorage.setItem('public', resp.data.public)
       // Route to /passwords
+      ctx.commit('toggleLoggedInState')
       router.push('/flow')
     
     },
-    async isLoggedIn() {
+    async isLoggedIn(ctx) {
       
         if(sessionStorage.getItem('userToken')) {
-          console.log("FIRE DA LISA")
+          ctx.commit('toggleLoggedInState')
           router.push('/flow')
         }
       
@@ -136,7 +143,7 @@ export default new Vuex.Store({
             'authorization': `Bearer ${sessionStorage.getItem('userToken')}`
           }
         })
-        ctx.commit('fetchedStreams', resp.data)
+        ctx.dispatch('fetchFlow')
         console.log('resp:', resp.data)
       } catch (error){
         console.error(error)
@@ -166,6 +173,10 @@ export default new Vuex.Store({
         console.log("the error:", error)
         
       }
+    },
+    backToStart(ctx) {
+      ctx.commit('toggleDisplaySettings'),
+      router.push("/")
     }
 },
   modules: {
