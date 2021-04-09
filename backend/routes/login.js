@@ -33,7 +33,8 @@ router.post('/', async (req, res) => {
             // return key + JWT to frontend
             res.send({
                 token: token,
-                userkey: DECRYPTED_USER_KEY
+                userkey: DECRYPTED_USER_KEY,
+                public: process.env.PUBLIC_KEY
             });
 
         } else {

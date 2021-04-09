@@ -4,7 +4,7 @@
     <WavesFooter />
     <section id="register-user">
       <input class="username-input" type="text" v-model="username" placeholder="Användarnamn">
-      <input class="password-input" type="text" v-model="password" placeholder="Lösenord">
+      <input class="password-input" type="password" v-model="password" placeholder="Lösenord">
       <button @click="register">Registrera</button>
     </section>
   </section>

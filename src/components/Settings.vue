@@ -2,23 +2,23 @@
   <section v-show="display" id="settings">
     <h2 class="settings-header">Streams</h2>
       <section class="followed-streams">
-        <section class="stream-tag">
+        <section v-for="(stream, index) in streams" :key="index" class="stream-tag">
           <span class="stream-name">
-            #Gothenburg
+            {{stream}}
           </span>
           <span class="cross-button-container">
-            <img class="stream-img" src="../assets/cross_button.svg" alt="">
+            <img class="stream-img" src="../assets/cross_button.svg" @click="removeStream(stream)" alt="">
           </span>
         </section>
       </section>
       <section class="add-stream-section">
-        <input class="add-stream-input" type="text">
-        <div class="checkmark-container">
+        <input class="add-stream-input" type="text" v-model="streamInput">
+        <div class="checkmark-container" @click="addStream">
           <img src="../assets/checkmark.svg" alt="">
         </div>
 
       </section>
-        <button class="remove-user">
+        <button @click="removeUser" class="remove-user">
           Shit, theyre on to me!
         </button>
   </section>
@@ -27,9 +27,32 @@
 <script>
 export default {
   name: "Settings",
+  data() {
+    return {
+      streamInput: ""
+    }
+  },
   computed: {
     display() {
       return this.$store.state.displaySettings
+    },
+    streams() {
+        return this.$store.state.streams
+    }
+  },
+  methods: {
+    addStream(){
+      let input = this.streamInput
+
+      this.$store.dispatch('addStream', input)
+      this.streamInput = ''
+    },
+    removeStream(stream) {
+      this.$store.dispatch('removeStream', stream)
+    },
+    removeUser() {
+      console.log("DELETE")
+      this.$store.dispatch("removeUser")
     }
   }
 }

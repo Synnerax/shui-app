@@ -5,7 +5,10 @@ const cors = require('cors');
 
 const registerUser = require('./routes/registerUser');
 const authenticate = require('./routes/login.js');
-const streamMessages = require('./routes/streams.js');
+const streamMessages = require('./routes/messages.js');
+const streams = require('./routes/streams.js');
+const removeUser = require('./routes/gdpr.js');
+
 const PORT = process.env.PORT || 3000
 
 const App = express();
@@ -16,7 +19,9 @@ App.use(express.json());
 
 App.use('/register', registerUser);
 App.use('/login', authenticate)
-App.use('/stream', streamMessages)
+App.use('/flow', streamMessages)
+App.use('/streams', streams)
+App.use('/gdpr', removeUser)
 
 
 App.listen(PORT, () => {

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Banner/>
+    <Settings/>
   <!--  <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
@@ -12,11 +13,12 @@
 
 <script>
 import Banner from "@/components/StreamBanner.vue"
-
+import Settings from '@/components/Settings.vue'
 export default {
   name: "App",
   components: {
-    Banner
+    Banner,
+    Settings
   }
 }
 </script>
@@ -67,6 +69,7 @@ nav {
     font-family: 'PT Sans', sans-serif;
     display: flex;
     flex-direction: column;
+    z-index: 5;
 
     .settings-header {
       color: #FFFFFF;
@@ -79,9 +82,12 @@ nav {
 
     .followed-streams {
       display: flex;
+      flex-wrap: wrap;
       width: 90%;
       margin: 0 auto;
       .stream-tag {
+        margin-top: 9px;
+        margin-left: 15px;
         display: flex;
         align-items: center;
         height: 32px;
@@ -93,6 +99,7 @@ nav {
           padding-left: 9px;
           color: #FFFFFF;
           font-style: italic;
+          margin-left: 15px;
           
         }
 
@@ -199,11 +206,8 @@ nav {
 
       color: rgba(0, 178, 255, 0.8);
     }
-    .msg-triangle {
-      position: absolute;
-      right: 0;
-    }
   }
+
   .stream-msg {
     width: 100%;
     min-height: 152px;
@@ -253,7 +257,10 @@ nav {
     color: rgba(0, 178, 255, 0.8);
     }
 }
-
+    .msg-triangle {
+      position: absolute;
+      right: 0;
+    }
 .waves {
   width: 100%;
   position: absolute;
@@ -266,5 +273,20 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+#text-area {
+  resize: none;
+  width: 95%;
+  height: 95%;
+  border: none;
+}
+
+.push-to-streams > input {
+  border-style: none;
+  background: none;
+  width: 98%;
+  height: 95%;
 }
 </style>

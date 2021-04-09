@@ -1,32 +1,57 @@
 {
   "users": [
     {
-      "uuid": "ltFWIddhBC",
+      "uuid": "36leKEbkVA",
       "username": "elliot",
-      "password": "$2b$10$8sXPZ/.cZVVtpfh6ndQ9Sen8Xz.WaBfkh7Cqfo/gbv3mFBD0GNJCy",
-      "userkey": "U2FsdGVkX19fiqrMB8vLraL9bHbykIeDYApbyeN9hcI="
+      "password": "$2b$10$NjdG.Of9mho9Auds7vlXNe9gIbMfqsVTDe/ZxISPC/lstvhx50b/K",
+      "userkey": "U2FsdGVkX1+cj4ya3tbranWNuux5xwZtKQCZJ0q4gMw=",
+      "streams": []
     },
     {
-      "uuid": "awRH9Gw7HH",
-      "username": "elliot2",
-      "password": "$2b$10$BX/96.x4zmKLaX/yeIZtFOk3E5xqrvXSk9ebHF0UuxEkPIB1IoAU6",
-      "userkey": "U2FsdGVkX187HIkB3GlD4RrMilRumvr7N+w6Ytvbgwk="
+      "uuid": "VTYpv_Tz2J",
+      "username": "elliot1",
+      "password": "$2b$10$MYi27GFKL7Bql86p74T76OAblNdPgMmL5exvKBaBjeMGtAforToCe",
+      "userkey": "U2FsdGVkX199FUjfdYwe8UMd6ShirGFrTGnbg29amRA=",
+      "streams": []
     }
   ],
   "stream-flow": [
     {
-      "id": "5UvGuczle",
-      "owner": "71f4f24d21f518c31660643bedc1c941e7fa4496af539e11e6851f9ef1e5145b3b2f068af914b99bcf4d1947fbe75a1837d6445788de090ada0aa2ccf7fbc1dc",
+      "id": "kCuvsYDrs",
+      "date": "2021-04-09, 16:50:37",
       "username": "elliot",
-      "streams": "Gothenburg",
-      "message": "test msg"
+      "streams": [
+        "gbg",
+        "123"
+      ],
+      "text": "U2FsdGVkX18WTbCUaOUQwNCcWshTJ23p1guB+K8Mt9S3mHJYQnF3/19P0+gIaP+FWZ7sny9KbwqBSBniUB7XSQ=="
     },
     {
-      "id": "zd618aGcI",
-      "owner": "71f4f24d21f518c31660643bedc1c941e7fa4496af539e11e6851f9ef1e5145b3b2f068af914b99bcf4d1947fbe75a1837d6445788de090ada0aa2ccf7fbc1dc",
+      "id": "Nj9mjrm-8",
+      "date": "2021-04-09, 16:50:51",
       "username": "elliot",
-      "streams": "Gothenburg",
-      "message": "test msg"
+      "streams": [
+        "test123456"
+      ],
+      "text": "U2FsdGVkX1/K6/Uvtah1/AQ1Ujsi2Y6/O69O2sXD1Z1n7FGxVXLKRKGJGmRYgP/d"
+    },
+    {
+      "id": "vpNuMcAMv",
+      "date": "2021-04-09, 16:59:01",
+      "username": "Anonym",
+      "streams": [
+        "Helg"
+      ],
+      "text": "U2FsdGVkX1/JUk6CyurMFQIlfXYxpsHSedyKZh8+rjw="
+    },
+    {
+      "id": "-R-JDXURG",
+      "date": "2021-04-09, 16:59:42",
+      "username": "Anonym",
+      "streams": [
+        "väder"
+      ],
+      "text": "U2FsdGVkX1/9PFyjcK2LTuTiiyL1dwJYjqIbZS1JfzY="
     }
   ]
 }
